@@ -1,0 +1,487 @@
+/* line 10, D:/WEB/Projects/Slider/assets/scss/style.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 14, D:/WEB/Projects/Slider/assets/scss/style.scss */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 19, D:/WEB/Projects/Slider/assets/scss/style.scss */
+ul {
+  padding: 0;
+}
+
+/* line 23, D:/WEB/Projects/Slider/assets/scss/style.scss */
+li {
+  list-style-type: none;
+}
+
+/* line 27, D:/WEB/Projects/Slider/assets/scss/style.scss */
+a,
+a:visited,
+a:hover {
+  color: inherit;
+  text-decoration: none;
+  outline: none;
+}
+
+/* line 35, D:/WEB/Projects/Slider/assets/scss/style.scss */
+html {
+  font-size: 16px;
+}
+
+/* line 39, D:/WEB/Projects/Slider/assets/scss/style.scss */
+html,
+body {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* line 45, D:/WEB/Projects/Slider/assets/scss/style.scss */
+body {
+  font-family: "Muli", sans-serif;
+  color: #030303;
+}
+
+/* line 50, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#slides-main, #slides-main:after, #slides-main .slide-image, #slides-main .abs-mask, #slides-main .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 58, D:/WEB/Projects/Slider/assets/scss/style.scss */
+.mask {
+  overflow: hidden;
+}
+
+/* #LAYOUT - START*/
+/* line 69, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#hero-slider {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  background: #030303;
+}
+
+/* line 75, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#hero-slider:not(.ready) {
+  visibility: hidden;
+}
+
+/* line 80, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#slideshow {
+  position: relative;
+  flex: 1 1 80%;
+  display: flex;
+  align-items: flex-end;
+  padding: 2rem;
+}
+
+/* line 92, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#slides-main:after {
+  content: '';
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: 100;
+}
+
+/* line 99, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#slides-main .slide-image {
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+}
+
+/* line 107, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#slides-aux {
+  position: relative;
+  top: 1.25rem;
+  width: 100%;
+}
+
+/* line 112, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#slides-aux .slide-title {
+  position: absolute;
+  z-index: 300;
+  font-size: 4vw;
+  font-weight: 700;
+  line-height: 1.3;
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+}
+
+/* line 122, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#info {
+  position: relative;
+  flex: 1 1 20%;
+  padding: 2rem;
+  background-color: #fff;
+}
+
+/* line 128, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#info .slider-title-wrapper {
+  position: absolute;
+  top: 2rem;
+  left: calc(100% - 2rem);
+  transform-origin: 0% 0%;
+  transform: rotate(90deg);
+  color: transparent;
+  -webkit-text-stroke: 1px #030303;
+}
+
+/* line 137, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#info .slider-title {
+  position: relative;
+  font-size: 9vmax;
+  line-height: 1.3;
+  white-space: nowrap;
+  font-weight: 700;
+  text-align: center;
+  text-indent: -1%;
+}
+
+/* line 147, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#info .line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 12px;
+  width: 100%;
+  background: #030303;
+}
+
+/* line 156, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#info .about {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  text-align: right;
+  max-width: 75%;
+  font-size: .8rem;
+  line-height: 1.2;
+}
+
+/* line 167, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#logo {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  padding-right: 2rem;
+  z-index: 300;
+}
+
+/* line 174, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#logo .logo-text {
+  position: relative;
+  font-size: 2rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+/* line 181, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#logo:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 1px;
+  background-color: #fff;
+}
+
+/* line 192, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#slider-nav {
+  position: absolute;
+  top: 2rem;
+  right: calc(20% - 130px/2);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 500;
+}
+
+/* line 201, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#slider-nav .current {
+  color: #fff;
+}
+
+/* line 205, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#slider-nav .sep:before, #slider-nav .sep:after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 50%;
+}
+
+/* line 212, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#slider-nav .sep {
+  position: relative;
+  width: 40px;
+  height: 2px;
+  margin: 0 1rem;
+}
+
+/* line 218, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#slider-nav .sep:before {
+  background-color: #fff;
+  left: 0;
+}
+
+/* line 224, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#slider-nav .sep:after {
+  background-color: currentColor;
+  right: 0;
+}
+
+/* line 231, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#slider-nav .total {
+  color: #030303;
+}
+
+/* line 235, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#slider-nav > span {
+  font-size: 1.5rem;
+}
+
+/* #LAYOUT - END*/
+/* #INITIAL ANIMATION - START */
+/* line 245, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#hero-slider #logo:after {
+  transform: scaleY(0);
+  transform-origin: 50% 0;
+  transition: transform 0.35s cubic-bezier(0.694, 0, 0.335, 1);
+}
+
+/* line 251, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#hero-slider .logo-text {
+  display: block;
+  transform: translate3d(120%, 0, 0);
+  opacity: 0;
+  transition: transform .8s .2s, opacity .5s .2s;
+}
+
+/* line 258, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#hero-slider .current,
+#hero-slider .sep:before {
+  opacity: 0;
+  transition: opacity .4s 1.3s;
+}
+
+/* line 264, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#hero-slider #info {
+  transform: translate3d(100%, 0, 0);
+  transition: transform 1s cubic-bezier(0.694, 0, 0.335, 1) 0.6s;
+}
+
+/* line 269, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#hero-slider .line {
+  transform-origin: 0% 0;
+  transform: scaleX(0);
+  transition: transform 0.7s cubic-bezier(0.694, 0, 0.335, 1) 1s;
+}
+
+/* line 275, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#hero-slider .slider-title {
+  overflow: hidden;
+}
+
+/* line 278, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#hero-slider .slider-title > span {
+  display: block;
+  transform: translate3d(0, -100%, 0);
+  transition: transform .5s 1.5s;
+}
+
+/* line 286, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#hero-slider.ready #logo:after {
+  transform: scaleY(1);
+}
+
+/* line 290, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#hero-slider.ready .line {
+  transform: scaleX(1);
+}
+
+/* line 294, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#hero-slider.ready .logo-text {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 299, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#hero-slider.ready #info,
+#hero-slider.ready .slider-title > span {
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 304, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#hero-slider.ready .current,
+#hero-slider.ready .sep:before {
+  opacity: 1;
+}
+
+/* line 311, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#hero-slider:not(.loaded) .slide:not(:first-child) {
+  visibility: hidden;
+}
+
+/* #INITIAL ANIMATION - END */
+/* #SLIDESHOW - START */
+/* line 320, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#slides-main {
+  overflow: hidden;
+}
+
+/* line 323, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#slides-main .abs-mask {
+  overflow: hidden;
+}
+
+/* line 329, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#slides-main .slide {
+  overflow: hidden;
+  will-change: transform;
+}
+
+/* line 334, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#slides-main .slide .slide-image {
+  will-change: transform;
+}
+
+/* line 338, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#slides-main .slide.prev {
+  z-index: 5;
+  transform: translate3d(-100%, 0, 0);
+  transition: 1s cubic-bezier(0.694, 0, 0.335, 1);
+}
+
+/* line 343, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#slides-main .slide.prev .abs-mask {
+  transform: translateX(80%);
+  transition: 1s cubic-bezier(0.694, 0, 0.335, 1);
+}
+
+/* line 353, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#slides-main .slide.active {
+  z-index: 10;
+  transform: translate3d(0, 0, 0);
+  transition: transform 1s cubic-bezier(0.694, 0, 0.335, 1);
+}
+
+/* line 358, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#slides-main .slide.active .abs-mask {
+  transform: translate3d(0, 0, 0);
+  transition: transform 1s cubic-bezier(0.694, 0, 0.335, 1);
+}
+
+/* line 369, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#slides-main .slide:not(.prev):not(.active) {
+  z-index: -1;
+  transform: translate3d(100%, 0, 0);
+}
+
+/* line 373, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#slides-main .slide:not(.prev):not(.active) .abs-mask {
+  transform: translateX(-50%);
+}
+
+/* line 385, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#hero-slider.prev #slides-main .slide.prev {
+  transform: translate3d(100%, 0, 0);
+}
+
+/* line 388, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#hero-slider.prev #slides-main .slide.prev .abs-mask {
+  transform: translate3d(-80%, 0, 0);
+}
+
+/* line 393, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#hero-slider.prev #slides-main .slide:not(.prev):not(.active) {
+  transform: translate3d(-100%, 0, 0);
+}
+
+/* line 396, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#hero-slider.prev #slides-main .slide:not(.prev):not(.active) .abs-mask {
+  transform: translate3d(50%, 0, 0);
+}
+
+/* line 406, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#slides-aux .slide:not(.active) {
+  transform: translateX(-20%);
+  opacity: 0;
+}
+
+/* line 411, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#slides-aux .slide.prev {
+  transition: transform .0s .2s, opacity .2s;
+}
+
+/* line 415, D:/WEB/Projects/Slider/assets/scss/style.scss */
+#slides-aux .slide.active {
+  transition: opacity 0.6s 0.8s, transform 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0.8s;
+}
+
+/* #SLIDESHOW - END */
+/* #RESPONSIVE - START*/
+/* Landscape */
+@media only screen and (max-device-width: 812px) and (orientation: landscape) {
+  /* line 428, D:/WEB/Projects/Slider/assets/scss/style.scss */
+  #info .line,
+  #info .about {
+    display: none;
+  }
+  /* line 433, D:/WEB/Projects/Slider/assets/scss/style.scss */
+  #info .slider-title-wrapper {
+    top: auto;
+    bottom: 2rem;
+    left: calc(70% + 11px);
+    transform-origin: 35% -100%;
+  }
+  /* line 441, D:/WEB/Projects/Slider/assets/scss/style.scss */
+  #slides-aux {
+    top: 0;
+  }
+}
+
+@media only screen and (max-device-width: 768px) and (orientation: portrait) {
+  /* line 447, D:/WEB/Projects/Slider/assets/scss/style.scss */
+  #info {
+    display: none;
+  }
+  /* line 451, D:/WEB/Projects/Slider/assets/scss/style.scss */
+  #slides-aux {
+    display: flex;
+    align-items: flex-end;
+    top: 0;
+  }
+  /* line 456, D:/WEB/Projects/Slider/assets/scss/style.scss */
+  #slides-aux .slide-title {
+    font-size: 3rem;
+  }
+  /* line 461, D:/WEB/Projects/Slider/assets/scss/style.scss */
+  #slider-nav {
+    right: 2rem;
+  }
+}
+
+@media only screen and (max-device-width: 680px) and (orientation: portrait) {
+  /* line 469, D:/WEB/Projects/Slider/assets/scss/style.scss */
+  #slides-aux .slide-title {
+    font-size: 2.5rem;
+  }
+  /* line 474, D:/WEB/Projects/Slider/assets/scss/style.scss */
+  #slider-nav {
+    top: 6rem;
+    right: auto;
+    left: 2rem;
+  }
+}
+
+/* #RESPONSIVE - END*/
+
+/*# sourceMappingURL=../css/style.map */
