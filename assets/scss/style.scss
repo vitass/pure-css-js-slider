@@ -158,9 +158,13 @@ body {
         bottom: $offset;
         right: $offset;
         text-align: right;
-        max-width: 75%;
+        max-width: 85%;
         font-size: .8rem;
         line-height: 1.2;
+
+        a:hover {
+            opacity: .8;
+        }
     }
 }
 
